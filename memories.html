@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories — A Collection of Moments</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-page">
+
+    <!-- Warm ambient dandelion & bokeh background -->
+    <canvas id="ambientCanvas"></canvas>
+
+    <!-- Background Music (Dandelions by Ruth B) -->
+    <audio id="bgAudio" src="audio/dandelions.mp3" loop preload="auto"></audio>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            FOR YOU<span>.</span>
+        </a>
+
+        <div class="nav-actions">
+            <button id="audioToggleBtn" class="audio-btn" aria-label="Toggle Dandelions background music">
+                <span class="audio-icon-wave">
+                    <span></span><span></span><span></span>
+                </span>
+                <span class="audio-label">Play Dandelions 🎵</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Greeting</a>
+            <a href="cake.html">Make a Wish</a>
+            <a href="wishes.html">Wishes</a>
+            <a href="letter.html">Letter</a>
+            <a href="memories.html" class="active">Memories</a>
+        </nav>
+    </header>
+
+
+    <main class="inner-page">
+
+        <section class="page-heading">
+            <p class="eyebrow">
+                05 / MEMORIES
+            </p>
+            <h1>
+                A collection of<br>
+                little <span>moments.</span>
+            </h1>
+            <p>
+                The quiet days, the endless laughs, and every little second that means the world. Click on any polaroid to view full size.
+            </p>
+        </section>
+
+
+        <!-- FIXED PHOTO SCRAPBOOK GALLERY WITH YOUR UPLOADED PHOTOS -->
+        <section class="scrapbook-grid">
+
+            <!-- MEMORY 1: TEDDY BEAR -->
+            <article class="polaroid-card">
+                <div class="washi-tape"></div>
+                <div class="polaroid-photo-wrapper">
+                    <img src="images/memory_teddy.jpg" alt="Soft hugs with teddy bear">
+                    <span class="polaroid-zoom-hint">🔍 Expand</span>
+                </div>
+                <div class="polaroid-caption">
+                    <h3>Soft hugs & warm hearts 🧸</h3>
+                    <p>December • Forever My Safe Space</p>
+                </div>
+            </article>
+
+            <!-- MEMORY 2: BLEACHERS -->
+            <article class="polaroid-card">
+                <div class="washi-tape"></div>
+                <div class="polaroid-photo-wrapper">
+                    <img src="images/memory_bleachers.jpg" alt="Looking at each other on the bleachers">
+                    <span class="polaroid-zoom-hint">🔍 Expand</span>
+                </div>
+                <div class="polaroid-caption">
+                    <h3>The way you look at me 🤍</h3>
+                    <p>Pure Connection • Favorite Moments</p>
+                </div>
+            </article>
+
+            <!-- MEMORY 3: SPIDERMAN SUIT MIRROR SELFIE -->
+            <article class="polaroid-card">
+                <div class="washi-tape"></div>
+                <div class="polaroid-photo-wrapper">
+                    <img src="images/memory_spiderman.jpg" alt="Spider-Man mirror selfie with camera">
+                    <span class="polaroid-zoom-hint">🔍 Expand</span>
+                </div>
+                <div class="polaroid-caption">
+                    <h3>My real-life Peter Parker 🕷️</h3>
+                    <p>More Than Any Fantasy Love</p>
+                </div>
+            </article>
+
+            <!-- MEMORY 4: PLAYFUL SILLY POLAROID -->
+            <article class="polaroid-card">
+                <div class="washi-tape"></div>
+                <div class="polaroid-photo-wrapper">
+                    <img src="images/memory_silly.jpg" alt="Playful silly moments together">
+                    <span class="polaroid-zoom-hint">🔍 Expand</span>
+                </div>
+                <div class="polaroid-caption">
+                    <h3>Being our weirdest selves 😂</h3>
+                    <p>Unmatched Energy • Pure Laughter</p>
+                </div>
+            </article>
+
+            <!-- MEMORY 5: HOLDING HANDS WALKING -->
+            <article class="polaroid-card">
+                <div class="washi-tape"></div>
+                <div class="polaroid-photo-wrapper">
+                    <img src="images/memory_holdinghands.jpg" alt="Holding hands walking together">
+                    <span class="polaroid-zoom-hint">🔍 Expand</span>
+                </div>
+                <div class="polaroid-caption">
+                    <h3>Holding your hand through everything 🫶🏻</h3>
+                    <p>To Infinity & Beyond With You</p>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- SWEET CLOSING BANNER -->
+        <section class="memory-ending-banner">
+            <h2>
+                More memories<br>
+                <span>still to come.</span>
+            </h2>
+            <p>
+                InshaAllah a lifetime of laughter, silly arguments, crazy adventures, and endless love. Happy Birthday, my love! 🤍🎂
+            </p>
+            <a href="index.html" class="solid-button">
+                REPLAY FROM BEGINNING
+                <span>↻</span>
+            </a>
+        </section>
+
+    </main>
+
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+        <div class="lightbox-content">
+            <button id="lightboxClose" class="lightbox-close-btn" aria-label="Close photo view">✕</button>
+            <img id="lightboxImage" class="lightbox-image" src="" alt="Enlarged photo memory">
+            <h3 id="lightboxTitle" class="lightbox-caption-title"></h3>
+            <p id="lightboxText" class="lightbox-caption-text"></p>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>05 / 05 • To infinity, beyond, and forever with you <span>🤍</span></p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

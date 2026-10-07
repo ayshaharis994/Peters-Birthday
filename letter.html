@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Love Letter — For You</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-page">
+
+    <!-- Warm ambient dandelion & bokeh background -->
+    <canvas id="ambientCanvas"></canvas>
+
+    <!-- Background Music (Dandelions by Ruth B) -->
+    <audio id="bgAudio" src="audio/dandelions.mp3" loop preload="auto"></audio>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            FOR YOU<span>.</span>
+        </a>
+
+        <div class="nav-actions">
+            <button id="audioToggleBtn" class="audio-btn" aria-label="Toggle Dandelions background music">
+                <span class="audio-icon-wave">
+                    <span></span><span></span><span></span>
+                </span>
+                <span class="audio-label">Play Dandelions 🎵</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Greeting</a>
+            <a href="cake.html">Make a Wish</a>
+            <a href="wishes.html">Wishes</a>
+            <a href="letter.html" class="active">Letter</a>
+            <a href="memories.html">Memories</a>
+        </nav>
+    </header>
+
+
+    <main class="letter-page">
+
+        <section class="letter-intro">
+            <p class="eyebrow">
+                04 / A SPECIAL LETTER
+            </p>
+            <h1>
+                Something I<br>
+                wanted to <span>say.</span>
+            </h1>
+        </section>
+
+
+        <!-- AESTHETIC STATIONERY TEMPLATE (WARM BEIGE & BURGUNDY) -->
+        <article class="letter-stationery">
+
+            <div class="stationery-border">
+
+                <!-- Postal & Airmail Header -->
+                <div class="letter-postal-header">
+                    <div class="postmark-badge">
+                        <span>AIRMAIL SPECIAL DELIVERY</span>
+                        <span>POSTMARKED: DECEMBER • CONFIDENTIAL 🤍</span>
+                    </div>
+
+                    <!-- Vintage Stamp with Cancellation Marks -->
+                    <div class="vintage-stamp">
+                        <div class="stamp-heart">♥</div>
+                        <span>DECEMBER</span>
+                        <span>AIRMAIL</span>
+                    </div>
+                </div>
+
+                <!-- 3D Burgundy Lacquer Wax Seal -->
+                <div class="wax-seal-container">
+                    <div class="wax-seal-emboss" title="Sealed with love">
+                        <span>FOR YOU</span>
+                    </div>
+                </div>
+
+                <!-- Tucked Keepsake Polaroids from User's Photos -->
+                <div class="letter-polaroids-wrapper">
+                    <div class="tucked-polaroid">
+                        <img src="images/memory_spiderman.jpg" alt="Peter Parker and Gwen Stacy moment">
+                        <span>More than Peter loves MJ... 🕷️🤍</span>
+                    </div>
+                    <div class="tucked-polaroid">
+                        <img src="images/memory_teddy.jpg" alt="Cuddle with teddy bear">
+                        <span>Forever yours 🧸</span>
+                    </div>
+                </div>
+
+                <!-- Salutation -->
+                <p class="letter-salutation">
+                    Hey Love,
+                </p>
+
+                <!-- Letter Body -->
+                <div class="letter-body">
+
+                    <p>
+                        Happiest birthday to the best boyfriend to ever exist! 🤍 I love you sooo, sooo much, and no matter how many times I say it, I’ll always love you more than that.
+                    </p>
+
+                    <p>
+                        Every part of me loves every little piece of you. Sometimes I think about how there was a time when we didn’t even know each other, and now you’ve become such a huge and irreplaceable part of my life. I never imagined that someone could become this special to me. Even the smallest change in your mood can instantly affect mine—that’s how deeply connected I feel to you and how much you mean to me.
+                    </p>
+
+                    <p>
+                        You were the craziest, most unexpected, and honestly one of the best things that ever happened to me. And I genuinely, genuinely want to keep you in my life forever. If I had to choose the best answer to any of my prayers, it would always be you.
+                    </p>
+
+                    <p>
+                        I love you for exactly who you are—for your good sides, your flaws, your weirdness, your craziness, and every little thing that makes you you. You are everything I could have ever wished for, and somehow, Allah gave me even more than I knew to ask for.
+                    </p>
+
+                    <p>
+                        I love youuu, brooo. More than Klaus loves Caroline, Orihime loves Ichigo, or Peter loves MJ. Basically, more than any fantasy love ever could. 😂🤍
+                    </p>
+
+                </div>
+
+                <!-- Calligraphic Sign-off -->
+                <div class="letter-valediction">
+                    <span class="signature">
+                        -Always yours to keep. 🫶🏻
+                    </span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <div class="page-next">
+            <a href="memories.html" class="solid-button">
+                DISCOVER OUR MEMORIES
+                <span>→</span>
+            </a>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>04 / 05 • Kept safely in the deepest corner of my heart <span>🤍</span></p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

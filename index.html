@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday — A World For You</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-page">
+
+    <!-- Warm ambient dandelion & bokeh background -->
+    <canvas id="ambientCanvas"></canvas>
+
+    <!-- Background Music (Dandelions by Ruth B) -->
+    <audio id="bgAudio" src="audio/dandelions.mp3" loop preload="auto"></audio>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            FOR YOU<span>.</span>
+        </a>
+
+        <div class="nav-actions">
+            <button id="audioToggleBtn" class="audio-btn" aria-label="Toggle Dandelions background music">
+                <span class="audio-icon-wave">
+                    <span></span><span></span><span></span>
+                </span>
+                <span class="audio-label">Play Dandelions 🎵</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="active">Greeting</a>
+            <a href="cake.html">Make a Wish</a>
+            <a href="wishes.html">Wishes</a>
+            <a href="letter.html">Letter</a>
+            <a href="memories.html">Memories</a>
+        </nav>
+    </header>
+
+    <!-- MAIN GREETING HERO -->
+    <main class="greeting-hero-wrapper">
+        <section class="greeting-card">
+            
+            <!-- Warm Burgundy & Beige Gift Icon -->
+            <div class="greeting-floating-gift">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="24" width="48" height="34" rx="4" fill="url(#giftGrad)" stroke="#edd8c4" stroke-width="2"/>
+                    <rect x="4" y="16" width="56" height="12" rx="3" fill="#420f18" stroke="#fbf7f0" stroke-width="2"/>
+                    <rect x="29" y="16" width="6" height="42" fill="#edd8c4"/>
+                    <path d="M32 16C32 16 23 5 17 9C11 13 22 16 32 16Z" fill="#a82e42"/>
+                    <path d="M32 16C32 16 41 5 47 9C53 13 42 16 32 16Z" fill="#a82e42"/>
+                    <defs>
+                        <linearGradient id="giftGrad" x1="8" y1="24" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3b1119"/>
+                            <stop offset="1" stop-color="#1f090e"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <span class="greeting-badge">
+                DECEMBER • A DAY WORTH REMEMBERING
+            </span>
+
+            <h1>
+                HAPPY<br>
+                <span>BIRTHDAY.</span>
+            </h1>
+
+            <p class="greeting-quote">
+                "Today is completely and wholeheartedly your day. A little corner of the internet crafted with endless love, laughter, and appreciation—just for you."
+            </p>
+
+            <p class="greeting-subtext">
+                No rushed speeches here yet. Take a gentle breath, turn on Dandelions 🎵, and step inside to celebrate your special moment.
+            </p>
+
+            <div class="greeting-cta-group">
+                <a href="cake.html" class="solid-button">
+                    BEGIN CELEBRATION
+                    <span>✨</span>
+                </a>
+
+                <a href="cake.html" class="text-link">
+                    LIGHT YOUR CANDLE →
+                </a>
+            </div>
+
+            <div class="page-indicator-badge">
+                01 / 05
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Crafted with endless love in warm burgundy & beige <span>🤍</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

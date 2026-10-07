@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blow The Candle — Make A Wish</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-page">
+
+    <!-- Warm ambient dandelion & bokeh background -->
+    <canvas id="ambientCanvas"></canvas>
+    <!-- Confetti canvas for blowout -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Background Music (Dandelions by Ruth B) -->
+    <audio id="bgAudio" src="audio/dandelions.mp3" loop preload="auto"></audio>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            FOR YOU<span>.</span>
+        </a>
+
+        <div class="nav-actions">
+            <button id="audioToggleBtn" class="audio-btn" aria-label="Toggle Dandelions background music">
+                <span class="audio-icon-wave">
+                    <span></span><span></span><span></span>
+                </span>
+                <span class="audio-label">Play Dandelions 🎵</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Greeting</a>
+            <a href="cake.html" class="active">Make a Wish</a>
+            <a href="wishes.html">Wishes</a>
+            <a href="letter.html">Letter</a>
+            <a href="memories.html">Memories</a>
+        </nav>
+    </header>
+
+    <main class="celebrate-stage">
+
+        <div class="stage-heading">
+            <p class="eyebrow">
+                02 / MAKE A WISH
+            </p>
+            <h1>
+                Blow the candle &<br>
+                <span>make a wish.</span>
+            </h1>
+            <p class="stage-instruction">
+                Close your eyes, think of the one thing your heart longs for, and blow out the candle when the countdown hits zero.
+            </p>
+        </div>
+
+        <!-- 1. THE CANDLE SCENE -->
+        <section id="candleScene" class="candle-scene">
+
+            <div id="candleWrapper" class="candle-wrapper" title="Click to blow out candle">
+                <!-- Smoke puff element -->
+                <div id="candleSmoke" class="candle-smoke"></div>
+                <!-- Glowing flickering flame -->
+                <div id="candleFlame" class="flame"></div>
+                <!-- Candle wick -->
+                <div class="wick"></div>
+                <!-- Warm candle wax body -->
+                <div class="candle-cylinder"></div>
+                <!-- Stand base -->
+                <div class="candle-base"></div>
+            </div>
+
+            <!-- Countdown Timer Display -->
+            <div id="candleCountdown" class="countdown-display">
+                3
+            </div>
+
+            <p id="candleCountdownTip" class="countdown-tip">
+                Click 'Start Countdown', think of your wish, and blow!
+            </p>
+
+            <div class="candle-controls">
+                <button id="startTimerBtn" class="solid-button">
+                    START COUNTDOWN (3s) ⏳
+                </button>
+                <button id="blowCandleBtn" class="outline-button">
+                    💨 BLOW OUT CANDLE
+                </button>
+            </div>
+
+        </section>
+
+        <!-- 2. BIRTHDAY CAKE REVEAL (Appears after candle blown out) -->
+        <section id="cakeRevealContainer" class="cake-reveal-container">
+
+            <!-- Decorative French Vanilla & Burgundy Birthday Cake -->
+            <div class="birthday-cake-svg">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Base Plate -->
+                    <ellipse cx="100" cy="180" rx="90" ry="14" fill="#2b0f16" stroke="#edd8c4" stroke-width="2.5"/>
+                    <ellipse cx="100" cy="178" rx="80" ry="10" fill="#3d141e"/>
+
+                    <!-- Bottom Tier (Warm Vanilla Beige) -->
+                    <path d="M35 145C35 138 45 132 100 132C155 132 165 138 165 145V170C165 178 155 182 100 182C45 182 35 178 35 170V145Z" fill="#edd8c4"/>
+                    <!-- Burgundy Glaze Drips -->
+                    <path d="M35 147C45 158 55 145 65 157C75 146 85 159 95 147C105 158 115 146 125 158C135 147 145 159 155 148C160 153 165 149 165 149V142C165 135 155 130 100 130C45 130 35 135 35 142V147Z" fill="#7a1d2c"/>
+
+                    <!-- Middle Tier (Cream Beige) -->
+                    <path d="M50 105C50 98 60 92 100 92C140 92 150 98 150 105V132C150 140 140 144 100 144C60 144 50 140 50 132V105Z" fill="#f5ece1"/>
+                    <path d="M50 107C60 118 70 107 80 118C90 108 100 119 110 107C120 118 130 108 140 119C145 111 150 109 150 109V103C150 96 140 90 100 90C60 90 50 96 50 103V107Z" fill="#a82e42"/>
+
+                    <!-- Top Tier -->
+                    <path d="M68 68C68 62 76 56 100 56C124 56 132 62 132 68V95C132 102 124 106 100 106C76 106 68 102 68 95V68Z" fill="#fbf7f0"/>
+                    <path d="M68 70C78 78 88 68 98 77C108 68 118 78 128 70C130 73 132 70 132 70V66C132 60 124 54 100 54C76 54 68 60 68 66V70Z" fill="#7a1d2c"/>
+
+                    <!-- Ruby Strawberries & Cherries -->
+                    <circle cx="85" cy="58" r="6" fill="#be3e54"/>
+                    <circle cx="100" cy="54" r="7" fill="#a82e42"/>
+                    <circle cx="115" cy="58" r="6" fill="#be3e54"/>
+
+                    <!-- Candle on Top -->
+                    <rect x="98" y="32" width="4" height="22" fill="#edd8c4" rx="2"/>
+                    <!-- Sparkler Flame -->
+                    <circle cx="100" cy="24" r="7" fill="#fbf7f0"/>
+                    <circle cx="100" cy="24" r="3" fill="#be3e54"/>
+                    <path d="M100 12V18M100 30V36M88 24H94M106 24H112" stroke="#edd8c4" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <h2 class="cake-celebrate-title">
+                HAPPY BIRTHDAY! 🎉<br>
+                <span>MAY ALL YOUR WISHES COME TRUE</span>
+            </h2>
+
+            <p class="cake-celebrate-msg">
+                The candle is blown, your wish is in the air, and another year of joy, success, and love begins right now! 🎂✨
+            </p>
+
+            <!-- Make a Wish Box -->
+            <div class="wish-input-box">
+                <label for="wishInputField">Cast Your Secret Wish Into The Universe 💫</label>
+                <div class="wish-input-group">
+                    <input type="text" id="wishInputField" class="wish-text-field" placeholder="Type your birthday wish here...">
+                    <button type="button" id="submitWishBtn" class="wish-send-btn">Send Wish ✨</button>
+                </div>
+                <p id="wishSentAlert" class="wish-sent-alert">
+                    Your wish has flown into the stars! Ameen 🤍
+                </p>
+            </div>
+
+            <div class="cake-nav-group">
+                <a href="wishes.html" class="solid-button">
+                    UNWRAP YOUR WISHES
+                    <span>→</span>
+                </a>
+                <button type="button" id="relightCandleBtn" class="outline-button">
+                    RELIGHT CANDLE 🕯️
+                </button>
+            </div>
+
+        </section>
+
+        <div class="page-indicator-badge">
+            02 / 05
+        </div>
+
+    </main>
+
+    <footer>
+        <p>02 / 05 • May every prayer in your heart find its answer <span>🤍</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

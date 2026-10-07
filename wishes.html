@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes — Sealed With Love</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-page">
+
+    <!-- Warm ambient dandelion & bokeh background -->
+    <canvas id="ambientCanvas"></canvas>
+    <!-- Confetti canvas for unwrap -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Background Music (Dandelions by Ruth B) -->
+    <audio id="bgAudio" src="audio/dandelions.mp3" loop preload="auto"></audio>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            FOR YOU<span>.</span>
+        </a>
+
+        <div class="nav-actions">
+            <button id="audioToggleBtn" class="audio-btn" aria-label="Toggle Dandelions background music">
+                <span class="audio-icon-wave">
+                    <span></span><span></span><span></span>
+                </span>
+                <span class="audio-label">Play Dandelions 🎵</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Greeting</a>
+            <a href="cake.html">Make a Wish</a>
+            <a href="wishes.html" class="active">Wishes</a>
+            <a href="letter.html">Letter</a>
+            <a href="memories.html">Memories</a>
+        </nav>
+    </header>
+
+
+    <main class="inner-page">
+
+        <section class="page-heading">
+            <p class="eyebrow">
+                03 / WISHES
+            </p>
+            <h1>
+                A few things<br>
+                I <span>wish</span> for you.
+            </h1>
+            <p>
+                Each wish is wrapped in a rich burgundy satin ribbon. Click on each card to untie the ribbon and read what is inside.
+            </p>
+        </section>
+
+        <!-- Quick unwrap all toggle button -->
+        <div class="ribbon-controls-bar">
+            <button id="toggleAllRibbonsBtn" class="toggle-all-ribbons-btn">
+                🎀 Untie All Ribbons
+            </button>
+        </div>
+
+        <!-- WISH CARDS (Initially Closed With Ribbons) -->
+        <section class="wishes-grid">
+
+            <!-- WISH 1 -->
+            <article class="wish-card" data-wish-id="1">
+                <div class="wish-ribbon-cover">
+                    <!-- Burgundy Satin Ribbon Band -->
+                    <div class="satin-ribbon-band"></div>
+                    <!-- Satin Ribbon Bow -->
+                    <div class="satin-bow-knot" title="Click to untie ribbon">
+                        🎀
+                    </div>
+                    <span class="wish-card-number">01 / WISH</span>
+                    <h2 class="wish-card-title">
+                        Love
+                    </h2>
+                    <div class="untie-prompt">
+                        <span>✦</span> <span class="action-text">Untie ribbon & open</span> <span>✦</span>
+                    </div>
+                </div>
+
+                <!-- Hidden content inside the envelope -->
+                <div class="wish-inner-content">
+                    <p>
+Happy birthday ❤️ my favourite person. Having you in my life makes so many ordinary moments feel special. I’m wishing you a year full of happiness, success, good health, and everything you’ve been hoping for. Keep being the wonderful person you are. I hope you have the happiest birthday! 🎂❤️
+                    </p>
+                    <div class="wish-close-prompt">
+                        Click anywhere to re-fold ↩
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- WISH 2 -->
+            <article class="wish-card" data-wish-id="2">
+                <div class="wish-ribbon-cover">
+                    <div class="satin-ribbon-band"></div>
+                    <div class="satin-bow-knot" title="Click to untie ribbon">
+                        🎀
+                    </div>
+                    <span class="wish-card-number">02 / WISH</span>
+                    <h2 class="wish-card-title">
+                        Another year
+                    </h2>
+                    <div class="untie-prompt">
+                        <span>✦</span> <span class="action-text">Untie ribbon & open</span> <span>✦</span>
+                    </div>
+                </div>
+
+                <div class="wish-inner-content">
+                    <p>
+Another year older… May Allah increase your age, imaan, and wisdom because you clearly need all three 😭😂 and more and more and more patience to handle me for rest of your life 😭😂🤍
+                    </p>
+                    <div class="wish-close-prompt">
+                        Click anywhere to re-fold ↩
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- WISH 3 -->
+            <article class="wish-card" data-wish-id="3">
+                <div class="wish-ribbon-cover">
+                    <div class="satin-ribbon-band"></div>
+                    <div class="satin-bow-knot" title="Click to untie ribbon">
+                        🎀
+                    </div>
+                    <span class="wish-card-number">03 / WISH</span>
+                    <h2 class="wish-card-title">
+                        One more thing
+                    </h2>
+                    <div class="untie-prompt">
+                        <span>✦</span> <span class="action-text">Untie ribbon & open</span> <span>✦</span>
+                    </div>
+                </div>
+
+                <div class="wish-inner-content">
+                    <p>
+I genuinely hope that all the silent struggles, stress, and hard work you’re putting into your life lead you to the exact life you’ve always dreamed of. May Allah give you the strength and courage to face every up and down with that beautiful, strong smile of yours. May Allah always protect you, bless your journey, and never let that MashaAllah smile fade, not even for a moment. Ameen. 🤍
+                    </p>
+                    <div class="wish-close-prompt">
+                        Click anywhere to re-fold ↩
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- FINAL FEATURED WISH -->
+            <article class="wish-card featured-wish" data-wish-id="4">
+                <div class="wish-ribbon-cover">
+                    <div class="satin-ribbon-band"></div>
+                    <div class="satin-bow-knot" title="Click to untie ribbon">
+                        🎀
+                    </div>
+                    <span class="wish-card-number">04 / THE DEEPEST WISH</span>
+                    <h2 class="wish-card-title">
+                        And most importantly
+                    </h2>
+                    <div class="untie-prompt">
+                        <span>✦</span> <span class="action-text">Untie ribbon & open</span> <span>✦</span>
+                    </div>
+                </div>
+
+                <div class="wish-inner-content">
+                    <p>
+May Allah bless us with the long, happy life together that we’ve always dreamed of. I pray that even after years, we never lose the spark behind all the cringiest, weirdest, and most ridiculous things we do together. May we always be able to laugh freely, be our weirdest selves, and love each other just as genuinely as we do now.
+
+And one day, I hope we become the kind of love that our children point to when they’re asked what kind of love and life they want for themselves. May Allah keep our hearts close, fill our lives with barakah, and make our love something beautiful that lasts. Ameen. 🤍
+                    </p>
+                    <div class="wish-close-prompt">
+                        Click anywhere to re-fold ↩
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+
+        <div class="page-next">
+            <a href="letter.html" class="outline-button">
+                READ THE SPECIAL LETTER
+                <span>→</span>
+            </a>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>03 / 05 • Sealed with prayers and unwrapped with love <span>🤍</span></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
